@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap");
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg-deep:       #0a0f1e;
+  --color-bg-base:       #0f172a;
+  --color-bg-surface:    #1e293b;
+  --color-bg-hover:      #162032;
+  --color-border-subtle: #1e293b;
+  --color-border-muted:  #334155;
+  --color-text-primary:  #e2e8f0;
+  --color-text-secondary:#94a3b8;
+  --color-text-muted:    #64748b;
+  --color-text-dim:      #475569;
+  --color-accent:        #00e5b4;
+  --color-accent-dim:    #00e5b422;
+  --color-accent-border: #00e5b433;
+  --color-danger:        #ef4444;
+  --color-danger-dim:    #ef444422;
+  --color-danger-border: #ef444444;
+  --color-warning:       #f59e0b;
+  --color-success:       #10b981;
+  --color-info:          #3b82f6;
+  --font-display:        "Syne", sans-serif;
+  --font-body:           "DM Sans", sans-serif;
+}
+
+html, body { height: 100%; background: var(--color-bg-deep); color: var(--color-text-primary); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+#root { height: 100%; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
+input::placeholder, textarea::placeholder { color: var(--color-border-muted); }
+select option { background: var(--color-bg-surface); color: var(--color-text-primary); }
+button:hover  { filter: brightness(1.12); }
+button:active { transform: scale(0.98); }
+
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-base); }
+::-webkit-scrollbar-thumb { background: var(--color-bg-surface); border-radius: 3px; }
+
+@keyframes toastIn  { from { opacity:0; transform:translateY(-8px) scale(.96); } to { opacity:1; transform:translateY(0) scale(1); } }
+@keyframes spin     { to { transform: rotate(360deg); } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes slideUp  { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
